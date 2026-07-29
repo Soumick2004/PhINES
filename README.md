@@ -120,8 +120,6 @@ Once downloaded, place the file in the `Data Files/` folder with the expected na
 
 - `Data Files/negative_ProjectFinal_filtered_score0.1.csv`
 
-If you do not want to download the full file manually, you can use the already available `Total_Sampled_CustomNegative.csv` for the custom negative sampling workflow.
-
 ---
 
 ## How to Run the Notebooks
@@ -210,8 +208,7 @@ The training notebook produced the following example metrics in the recorded run
 - F1 Score: 0.8329
 - AUC-ROC: 0.8753
 - Balanced Accuracy: 0.8253
-
-These values indicate a strong-performing model on the evaluated dataset, with especially good recall.
+- Matthews Coef (MCC): 0.6875
 
 ---
 
@@ -240,6 +237,6 @@ Running the notebooks will generate:
 
 1. Activate the environment.
 2. Install the required packages.
-3. Download `Data Files/negative_ProjectFinal_filtered_score0.1.csv` from the provided link if needed.
+3. Download `Data Files/negative_ProjectFinal_filtered_score0.1.csv` from the provided link.
 4. Run `Neg_Edge_SamplingTest.ipynb` to create the custom negative set.
 5. Run `InitialTraining.ipynb` to train and evaluate the model.
