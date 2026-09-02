@@ -207,3 +207,4 @@ marimo/_lsp/
 __marimo__/
 
 Data Files/negative_ProjectFinal_filtered_score0.1.csv
+gnn_env/
