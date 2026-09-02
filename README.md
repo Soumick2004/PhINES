@@ -27,7 +27,7 @@ This is a research-style workflow and is intended for experimentation, model eva
 
 ## Repository Structure
 
-`Virtual Environment`  
+- `Virtual Environment`  
   Create a virtual environment before running the project scripts. This project was developed using Python 3.11.9, which was selected to ensure compatibility with the GPU-enabled dependencies used in the project, including PyTorch and Transformers. Using a different Python version may result in compatibility issues unless your system Python is already Python 3.11.9. 
 
 - `InitialTraining.ipynb`  
