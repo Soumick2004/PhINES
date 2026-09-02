@@ -7,7 +7,7 @@ This project trains a graph neural network (GCN) to predict interactions between
 - GCN-based edge classification, and
 - 5-fold cross-validation with standard classification metrics.
 
-The repository is designed to run on Windows with a dedicated Python virtual environment named `gnn_env`.
+The repository is designed to run on Windows with a dedicated Python virtual environment.
 
 ---
 
@@ -27,6 +27,9 @@ This is a research-style workflow and is intended for experimentation, model eva
 
 ## Repository Structure
 
+`Virtual Environment`  
+  Create a virtual environment before running the project scripts. This project was developed using Python 3.11.9, which was selected to ensure compatibility with the GPU-enabled dependencies used in the project, including PyTorch and Transformers. Using a different Python version may result in compatibility issues unless your system Python is already Python 3.11.9. 
+
 - `InitialTraining.ipynb`  
   Main training notebook. Loads the positive and negative datasets, generates embeddings, trains the GCN model, and prints evaluation metrics.
 
@@ -42,8 +45,6 @@ This is a research-style workflow and is intended for experimentation, model eva
 - `Total_Sampled_CustomNegative.csv`  
   Pre-generated custom sampled negative set that can be used directly by the second notebook.
 
-- `gnn_env/`  
-  Virtual environment created for this project. The environment is based on Python 3.11.9.
 
 ---
 
@@ -70,10 +71,10 @@ CPU execution is possible, but it will be significantly slower for embedding gen
 
 ## Virtual Environment Setup
 
-A virtual environment named `gnn_env` is already included in the project folder. If you want to recreate it manually, use the following commands in PowerShell:
+Create a virtual environment. To create it manually, use the following commands in PowerShell:
 
 ```powershell
-cd "C:\Users\soumi\OneDrive\Desktop\Innovative-Project"
+cd "C:\Users\YourUsername\Desktop\Project-name"
 python -m venv gnn_env
 .\gnn_env\Scripts\Activate.ps1
 python -m pip install --upgrade pip
@@ -127,7 +128,7 @@ Once downloaded, place the file in the `Data Files/` folder with the expected na
 ### 1. Activate the environment
 
 ```powershell
-cd "C:\Users\soumi\OneDrive\Desktop\Innovative-Project"
+cd "C:\Users\YourUsername\Desktop\Project-name"
 .\gnn_env\Scripts\Activate.ps1
 ```
 
@@ -164,7 +165,7 @@ This notebook will:
 - save a new file named `Total_Sampled_CustomNegative.csv`,
 - train the model using the custom sampled negatives.
 
-If the notebook kernel does not use the virtual environment, select the Python interpreter from the `gnn_env` folder in the Jupyter kernel menu.
+If the notebook does not automatically use the project's virtual environment, select the corresponding Python interpreter from the Jupyter kernel menu.
 
 ---
 
@@ -229,7 +230,7 @@ Running the notebooks will generate:
 - Keep the notebook files and data folder in the same project structure as shown here.
 - The notebooks use relative file paths, so running them from the project root is recommended.
 - If you change the dataset location, update the file paths inside the notebooks.
-- For best results, use the same Python version and package versions as the `gnn_env` environment.
+- For best results, use the same Python version and package versions as the virtual environment.
 
 ---
 
